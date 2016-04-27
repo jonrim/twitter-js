@@ -23,13 +23,15 @@
 			    <input type="submit" value="Submit" />
 			  </form>
 			{% endif %}
-      <!-- display tweets here -->
-      {% for tweet in tweets %}
-        <li class="name">
-        	<a href="/users/{{tweet.name}}">{{tweet.name}}</a>
-        </li>
-        <li class="tweet-text" >{{tweet.text}}</li>
-      {% endfor %}
+			<ul id="twitterfeed">
+	      <!-- display tweets here -->
+	      {% for tweet in tweets %}
+	        <li class="name">
+	        	<a href="/users/{{tweet.name}}">{{tweet.name}}</a>
+	        </li>
+	        <li class="tweet-text" >{{tweet.text}}</li>
+	      {% endfor %}
+	     </ul>
     </div>
   </div>
     
