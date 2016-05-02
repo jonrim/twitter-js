@@ -15,7 +15,7 @@
     	{% if showForm %}
 			  <form action="/tweets" method="POST">
 			    <label for="name_field">Name:</label>
-			    <input name="name" type="text" value="name will go here" id="name_field" />
+			    <input name="name" type="text" value="{{ username }}" id="name_field" />
 
 			    <label for="text_field">Text:</label>
 			    <input name="text" type="text" id="text_field" style="width: 350px;" />
@@ -29,7 +29,9 @@
 	        <li class="name">
 	        	<a href="/users/{{tweet.name}}">{{tweet.name}}</a>
 	        </li>
-	        <li class="tweet-text" >{{tweet.text}}</li>
+	        <li class="tweet-text" >
+	        	<a href="tweets{{tweet.text}}
+	        </li>
 	      {% endfor %}
 	     </ul>
     </div>

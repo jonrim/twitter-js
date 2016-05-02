@@ -1,9 +1,9 @@
 var _ = require('lodash');
 
-var data = [{name: "omri", text: "text"}];
+var data = [];
 
 function add (name, text) {
-  data.push({ name: name, text: text });
+  data.push({ name: name, text: text, id: data.length });
 }
 
 function list () {

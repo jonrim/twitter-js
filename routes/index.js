@@ -13,7 +13,7 @@ module.exports = function (io) {
 	router.get('/users/:name', function(req, res) {
 	  var name = req.params.name;
 	  var list = tweetBank.find(function(tweets) { return tweets.name === name; });
-	  res.render( 'index', { title: 'Twitter.js - Posts by ' + name, tweets: list, showForm: true } );
+	  res.render( 'index', { title: 'Twitter.js - Posts by ' + name, tweets: list, showForm: true, username: name } );
 	});
 
 	router.use(bodyParser.json());
